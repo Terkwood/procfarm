@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://ProcField.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ProcFence.tscn" type="PackedScene" id=2]
-[ext_resource path="res://player.png" type="Texture" id=3]
+[ext_resource path="res://Player.gd" type="Script" id=3]
+[ext_resource path="res://player.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 832, 1344 )
 
 [sub_resource type="Animation" id=4]
@@ -88,12 +89,13 @@ height = 21.5429
 [node name="ProcFence" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" type="Node2D" parent="."]
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Player"]
 position = Vector2( 169.351, 144.447 )
 texture = SubResource( 1 )
 region_enabled = true
-region_rect = Rect2( 192, 704, 64, 64 )
+region_rect = Rect2( 320, 704, 64, 64 )
 
 [node name="WalkUpAnim" type="AnimationPlayer" parent="Player/Sprite"]
 anims/WalkDown = SubResource( 4 )
