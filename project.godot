@@ -17,7 +17,8 @@ _global_script_class_icons={
 
 config/name="procfarm"
 run/main_scene="res://ProcFarm.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://terkwood_farm.png"
+config/icon="res://turkey.png"
 
 [rendering]
 
