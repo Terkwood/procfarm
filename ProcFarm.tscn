@@ -93,7 +93,7 @@ height = 21.5429
 position = Vector2( 169.351, 144.447 )
 texture = SubResource( 1 )
 region_enabled = true
-region_rect = Rect2( 128, 704, 64, 64 )
+region_rect = Rect2( 192, 704, 64, 64 )
 
 [node name="WalkUpAnim" type="AnimationPlayer" parent="Player/Sprite"]
 anims/WalkDown = SubResource( 4 )
