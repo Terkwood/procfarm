@@ -11,10 +11,6 @@ var height = 1         # in tiles
 onready var Map = $TileMap
 onready var Set = Map.tile_set
 
-
-func rand_tile_id():
-	return rand_range(11,14)
-
 func make_fence():
 	var width = min_width + randi()%max_width
 	var offset_x = randi()%max_offset_x
