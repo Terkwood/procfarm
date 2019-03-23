@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ProcField.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ProcFence.tscn" type="PackedScene" id=2]
@@ -77,6 +77,10 @@ tracks/0/keys = {
 "values": [ Rect2( 64, 512, 64, 64 ), Rect2( 128, 512, 64, 64 ), Rect2( 192, 512, 64, 64 ), Rect2( 256, 512, 64, 64 ), Rect2( 320, 512, 64, 64 ), Rect2( 384, 512, 64, 64 ), Rect2( 448, 512, 64, 64 ) ]
 }
 
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 13.4231
+height = 21.5429
+
 [node name="ProcFarm" type="Node2D"]
 
 [node name="ProcField" parent="." instance=ExtResource( 1 )]
@@ -89,11 +93,18 @@ tracks/0/keys = {
 position = Vector2( 169.351, 144.447 )
 texture = SubResource( 1 )
 region_enabled = true
-region_rect = Rect2( 192, 704, 64, 64 )
+region_rect = Rect2( 128, 704, 64, 64 )
 
 [node name="WalkUpAnim" type="AnimationPlayer" parent="Player/Sprite"]
 anims/WalkDown = SubResource( 4 )
 anims/WalkLeft = SubResource( 3 )
 anims/WalkRight = SubResource( 5 )
 anims/WalkUp = SubResource( 2 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Player"]
+position = Vector2( 152.748, 126.183 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/RigidBody2D"]
+position = Vector2( 15.7584, 25.0281 )
+shape = SubResource( 6 )
 
