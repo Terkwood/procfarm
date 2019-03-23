@@ -12,8 +12,6 @@ func rand_tile_id():
 	return rand_range(4,7)
 
 func make_field():
-	Map.clear()
-	var valid_tiles = []
 	for x in range(width):
 		for y in range(height):
 			Map.set_cellv(Vector2(x,y), rand_tile_id())

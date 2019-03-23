@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="procfarm"
-run/main_scene="res://ProcField.tscn"
+run/main_scene="res://ProcFarm.tscn"
 config/icon="res://icon.png"
 
 [rendering]
