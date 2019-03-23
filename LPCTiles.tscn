@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://lpc_base_farm.png" type="Texture" id=1]
+
+[node name="LPCTiles" type="Node2D"]
+
+[node name="grass_hole" type="Sprite" parent="."]
+position = Vector2( 7.10397, 0.568317 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 672, 832, 64, 64 )
+
+[node name="grass_clumps" type="Sprite" parent="."]
+position = Vector2( 65.3565, -35.2357 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 832, 32, 32 )
+
+[node name="grass_tiny" type="Sprite" parent="."]
+position = Vector2( 104.356, -35.2357 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 864, 32, 32 )
+
+[node name="grass_island" type="Sprite" parent="."]
+position = Vector2( 200.9, 3.4099 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 896, 96, 96 )
+
+[node name="grass_full" type="Sprite" parent="."]
+position = Vector2( 65.609, 0.683514 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 992, 32, 32 )
+
+[node name="grass_full2" type="Sprite" parent="."]
+position = Vector2( 103.709, 0.972149 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 672, 992, 32, 32 )
+
+[node name="grass_full3" type="Sprite" parent="."]
+position = Vector2( 141.808, 1.26078 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 704, 992, 32, 32 )
+
