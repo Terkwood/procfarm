@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://lpc_base_farm.png" type="Texture" id=1]
 
@@ -10,6 +10,9 @@ extents = Vector2( 16, 11 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 11 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4, 16 )
 
 [node name="LPCTiles" type="Node2D"]
 
@@ -63,11 +66,21 @@ texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 928, 640, 32, 32 )
 
+[node name="StaticBody2D" type="StaticBody2D" parent="fence_alt_3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fence_alt_3/StaticBody2D"]
+polygon = PoolVector2Array( 3, 9, -4, 9, -4, -16, 3, -16 )
+
 [node name="fence_alt_4" type="Sprite" parent="."]
 position = Vector2( 148, 100 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 960, 640, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fence_alt_4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fence_alt_4/StaticBody2D"]
+shape = SubResource( 4 )
 
 [node name="fence_alt_5" type="Sprite" parent="."]
 position = Vector2( 148, 68 )
@@ -182,4 +195,22 @@ position = Vector2( 200.9, 3.4099 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 640, 896, 96, 96 )
+
+[node name="castlewalls_0" type="Sprite" parent="."]
+position = Vector2( 263, -3 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 0, 32, 64 )
+
+[node name="castlewalls_1" type="Sprite" parent="."]
+position = Vector2( 263, 62 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 64, 32, 64 )
+
+[node name="castlewalls_2" type="Sprite" parent="."]
+position = Vector2( 263, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 128, 32, 64 )
 

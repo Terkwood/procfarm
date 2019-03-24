@@ -14,7 +14,7 @@ onready var Set = Map.tile_set
 func make_fence():
 	var width = min_width + randi()%max_width
 	var offset_x = randi()%max_offset_x
-	var offset_y = randi()%max_offset_y
+	var offset_y = randi()%max_offset_y	
 	Map.set_cellv(Vector2(offset_x, offset_y),
 					Set.find_tile_by_name("fence_alt_0"))
 	for x in range(width-2):

@@ -1,7 +1,6 @@
 extends Node2D
 
 # from http://kidscancode.org/blog/2018/08/godot3_procgen1/
-var tile_size = 64  # tile size (in pixels)
 var width = 100     # in tiles
 var height = 50     # in tiles
 

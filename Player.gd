@@ -1,27 +1,20 @@
-extends Node2D
+extends KinematicBody2D
 
-const incr = 1
+const WALK_SPEED = 400
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var velocity = Vector2()
 
-func next_x():
-	if Input.is_action_pressed("ui_right"):
-		return position.x + incr
-	elif Input.is_action_pressed("ui_left"):
-		return position.x - incr
+func _physics_process(delta):
+	if Input.is_action_pressed("ui_left"):
+		velocity.x = -WALK_SPEED
+	elif Input.is_action_pressed("ui_right"):
+		velocity.x =  WALK_SPEED
 	else:
-		return position.x
-
-func next_y():
-	if Input.is_action_pressed("ui_down"):
-		return position.y + incr
-	elif Input.is_action_pressed("ui_up"):
-		return position.y - incr
+		velocity.x = 0
+	if Input.is_action_pressed("ui_up"):
+		velocity.y = -WALK_SPEED
+	elif Input.is_action_pressed("ui_down"):
+		velocity.y =  WALK_SPEED
 	else:
-		return position.y
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	position = Vector2(next_x(), next_y())
+		velocity.y = 0
+	move_and_slide(velocity, Vector2(0, 0))
