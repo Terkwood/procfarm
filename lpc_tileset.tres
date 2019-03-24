@@ -1,20 +1,44 @@
-[gd_resource type="TileSet" load_steps=7 format=2]
+[gd_resource type="TileSet" load_steps=15 format=2]
 
 [ext_resource path="res://lpc_base_farm.png" type="Texture" id=1]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 3, 9, -4, 9, -4, -16, 3, -16 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4, 16 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 3, 8, 3, 16, -2, 16, -4, 10, -4, -13, 2, -13 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 7, -15, 16, -15, 16, 8, 3, 8, 2, -13 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 3, 16, -3, 16, -3, 8, 3, -13 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( -8, -13, 3, -13, -3, 8, -16, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( -8, -13, -16, 8, -16, -13 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( -4, 9, -4, -16, 16, -16, 16, 9 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 3, 9, -16, 9, -16, -13, -8, -13 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 3, -16, 3, 9, -8, -13, -2, -16 )
+
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 11 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 11 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 11 )
 
 [resource]
@@ -100,7 +124,7 @@ extents = Vector2( 10, 11 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 21.6435, 14 )
 } ]
 7/z_index = 0
@@ -116,7 +140,7 @@ extents = Vector2( 10, 11 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 14 )
 } ]
 8/z_index = 0
@@ -132,7 +156,7 @@ extents = Vector2( 10, 11 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 9, 14 )
 } ]
 9/z_index = 0
@@ -148,7 +172,7 @@ extents = Vector2( 10, 11 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 10/z_index = 0
@@ -164,7 +188,7 @@ extents = Vector2( 10, 11 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 2 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 11/z_index = 0
@@ -186,7 +210,19 @@ extents = Vector2( 10, 11 )
 13/tile_mode = 0
 13/occluder_offset = Vector2( 16, 16 )
 13/navigation_offset = Vector2( 16, 16 )
-13/shapes = [  ]
+13/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
 13/z_index = 0
 14/name = "fence_alt_7"
 14/texture = ExtResource( 1 )
@@ -206,7 +242,25 @@ extents = Vector2( 10, 11 )
 15/tile_mode = 0
 15/occluder_offset = Vector2( 16, 16 )
 15/navigation_offset = Vector2( 16, 16 )
-15/shapes = [  ]
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
 15/z_index = 0
 16/name = "fence_alt_9"
 16/texture = ExtResource( 1 )
@@ -246,7 +300,13 @@ extents = Vector2( 10, 11 )
 19/tile_mode = 0
 19/occluder_offset = Vector2( 16, 16 )
 19/navigation_offset = Vector2( 16, 16 )
-19/shapes = [  ]
+19/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
 19/z_index = 0
 20/name = "fence_alt_13"
 20/texture = ExtResource( 1 )
@@ -266,7 +326,19 @@ extents = Vector2( 10, 11 )
 21/tile_mode = 0
 21/occluder_offset = Vector2( 16, 16 )
 21/navigation_offset = Vector2( 16, 16 )
-21/shapes = [  ]
+21/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
 21/z_index = 0
 22/name = "fence_alt_15"
 22/texture = ExtResource( 1 )

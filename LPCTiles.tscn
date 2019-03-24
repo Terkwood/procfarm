@@ -89,10 +89,15 @@ region_enabled = true
 region_rect = Rect2( 992, 640, 32, 32 )
 
 [node name="fence_alt_6" type="Sprite" parent="."]
-position = Vector2( 20, 78 )
+position = Vector2( 18, 76 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 928, 672, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fence_alt_6"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fence_alt_6/StaticBody2D"]
+polygon = PoolVector2Array( 16, 8, 16, -15, 7, -15, 2, -13, -4, -13, -4, 10, -2, 16, 3, 16, 3, 8 )
 
 [node name="fence_alt_7" type="Sprite" parent="."]
 position = Vector2( 52, 78 )
@@ -101,10 +106,15 @@ region_enabled = true
 region_rect = Rect2( 960, 672, 32, 32 )
 
 [node name="fence_alt_8" type="Sprite" parent="."]
-position = Vector2( 84, 78 )
+position = Vector2( 86, 76 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 992, 672, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fence_alt_8"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fence_alt_8/StaticBody2D"]
+polygon = PoolVector2Array( 3, 16, 3, -13, -8, -13, -16, -13, -16, 8, -3, 8, -3, 16 )
 
 [node name="fence_alt_9" type="Sprite" parent="."]
 position = Vector2( 20, 110 )
@@ -125,10 +135,15 @@ region_enabled = true
 region_rect = Rect2( 992, 704, 32, 32 )
 
 [node name="fence_alt_12" type="Sprite" parent="."]
-position = Vector2( 20, 142 )
+position = Vector2( 18, 144 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 928, 736, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fence_alt_12"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fence_alt_12/StaticBody2D"]
+polygon = PoolVector2Array( -4, 9, -4, -16, 16, -16, 16, 9 )
 
 [node name="fence_alt_13" type="Sprite" parent="."]
 position = Vector2( 52, 142 )
@@ -137,10 +152,15 @@ region_enabled = true
 region_rect = Rect2( 960, 736, 32, 32 )
 
 [node name="fence_alt_14" type="Sprite" parent="."]
-position = Vector2( 84, 142 )
+position = Vector2( 86, 144 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 992, 736, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fence_alt_14"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fence_alt_14/StaticBody2D"]
+polygon = PoolVector2Array( 3, 9, 3, -16, -2, -16, -8, -13, -16, -13, -16, 9 )
 
 [node name="fence_alt_15" type="Sprite" parent="."]
 position = Vector2( 36, 187 )
