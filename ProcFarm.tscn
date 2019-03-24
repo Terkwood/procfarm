@@ -115,7 +115,7 @@ texture = SubResource( 2 )
 region_enabled = true
 region_rect = Rect2( 64, 576, 64, 64 )
 
-[node name="WalkUpAnim" type="AnimationPlayer" parent="Player/Sprite"]
+[node name="WalkAnims" type="AnimationPlayer" parent="Player/Sprite"]
 anims/WalkDown = SubResource( 3 )
 anims/WalkLeft = SubResource( 4 )
 anims/WalkRight = SubResource( 5 )
