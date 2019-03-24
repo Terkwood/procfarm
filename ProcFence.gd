@@ -8,6 +8,7 @@ var max_width  = 10     # in tiles
 var min_height =  3     # in tiles
 var max_height =  8     # in tiles
 
+
 const NW = 6
 const NE = 8
 const SW = 12
@@ -18,6 +19,8 @@ const VERTICAL = 4
 # get a reference to the map for convenience
 onready var Map = $TileMap
 onready var Set = Map.tile_set
+onready var Cow = $Animals/Cow
+
 
 func tile(c):
 	return Set.find_tile_by_name("fence_alt_"+str(c))
@@ -60,12 +63,19 @@ func make_fence():
 				offset_x ,
 				y + offset_y + 1),
 			tile(VERTICAL))
+	return [offset_x, offset_y, width, height]
 	
-
+const TILE_SIZE = 32
+func place_cow(offset_x, offset_y, width, height):
+	Cow.position.x = (offset_x + randi()%(width-1)) * TILE_SIZE
+	Cow.position.y = (offset_y + randi()%(height-1)) * TILE_SIZE
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	make_fence()
+	var fc = make_fence()
+	place_cow(fc[0], fc[1], fc[2], fc[3])
+	$Animals/Cow/Sprite/AnimationPlayer.play("EatLeft")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
